@@ -291,7 +291,7 @@ Wire Wire Line
 	4900 5300 4900 5350
 Text Label 5650 2850 2    50   ~ 0
 NRST
-Text Label 4500 2250 0    50   ~ 0
+Text Label 4900 2200 0    50   ~ 0
 NRST
 Text Label 5650 2750 2    50   ~ 0
 SWDIO
@@ -567,13 +567,12 @@ Wire Wire Line
 Wire Wire Line
 	4800 1200 5200 1200
 Connection ~ 5200 1200
-NoConn ~ 9050 3400
 Text Notes 700  1300 0    50   ~ 0
 External Interrupts: EXTI\n
 Text Label 9050 3300 0    50   ~ 0
-BMI_INTERRUPT
-Text Label 2000 3250 2    50   ~ 0
-BMI_INTERRUPT
+BMI_INTERRUPT1
+Text Label 2000 3150 2    50   ~ 0
+BMI_INTERRUPT1
 $Comp
 L Device:LED_Small D1
 U 1 1 5DEB075C
@@ -1240,7 +1239,7 @@ Text Label 1300 2400 0    50   ~ 0
 LED_3
 Text Label 1300 2750 0    50   ~ 0
 LED_4
-Text Label 1300 3100 0    50   ~ 0
+Text Label 1450 3000 0    50   ~ 0
 LED_5
 Text Label 1300 3450 0    50   ~ 0
 LED_6
@@ -1291,7 +1290,6 @@ NoConn ~ 2000 3850
 NoConn ~ 2000 3750
 NoConn ~ 2000 3650
 NoConn ~ 2000 3550
-NoConn ~ 2000 3150
 NoConn ~ 2000 3050
 NoConn ~ 2000 2950
 NoConn ~ 2000 2850
@@ -1722,4 +1720,53 @@ Wire Wire Line
 	650  6600 650  6950
 Wire Wire Line
 	850  6950 1100 6950
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5DF15EB2
+P 7550 4250
+F 0 "H1" H 7650 4296 50  0000 L CNN
+F 1 "ATTCH" H 7650 4205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 7550 4250 50  0001 C CNN
+F 3 "~" H 7550 4250 50  0001 C CNN
+	1    7550 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C14
+U 1 1 5DF185D2
+P 4900 2300
+F 0 "C14" H 4992 2346 50  0000 L CNN
+F 1 "100n" H 4992 2255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4900 2300 50  0001 C CNN
+F 3 "~" H 4900 2300 50  0001 C CNN
+	1    4900 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 2200 4500 2200
+Wire Wire Line
+	4500 2200 4500 2250
+$Comp
+L power:GND #PWR0124
+U 1 1 5DF18E3E
+P 4900 2500
+F 0 "#PWR0124" H 4900 2250 50  0001 C CNN
+F 1 "GND" H 4905 2327 50  0000 C CNN
+F 2 "" H 4900 2500 50  0001 C CNN
+F 3 "" H 4900 2500 50  0001 C CNN
+	1    4900 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 2400 4900 2500
+Text Label 9050 3400 0    50   ~ 0
+BMI_INTERRUPT2
+Text Label 2000 3250 2    50   ~ 0
+BMI_INTERRUPT2
+Wire Wire Line
+	1300 3100 1350 3100
+Wire Wire Line
+	1350 3100 1350 3000
+Wire Wire Line
+	1350 3000 1450 3000
 $EndSCHEMATC
